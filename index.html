@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div>
+        <input id="teste" type="text" value= >
+        <button class="gray-button" onclick="del()">AC</button>
+        <button class="gray-button" onclick="invert()">+/-</button>
+        <button class="blu-button" onclick="char('/')">/</button>
+        <button class="blu-button" onclick="char('*')">*</button>
+        <button class="black-button" onclick="char(7)">7</button>
+        <button class="black-button" onclick="char(8)">8</button>
+        <button class="black-button" onclick="char(9)">9</button>
+        <button class="blu-button" onclick="char('-')">-</button>
+        <button class="black-button" onclick="char(4)">4</button>
+        <button class="black-button" onclick="char(5)">5</button>
+        <button class="black-button" onclick="char(6)">6</button>
+        <button class="blu-button" onclick="char('+')">+</button>
+        <button class="black-button" onclick="char(1)">1</button>
+        <button class="black-button" onclick="char(2)">2</button>
+        <button class="black-button" onclick="char(3)">3</button>
+        <button id="equal" class="blue-button" onclick="calcular()">=</button>
+        <button id="zero" class="black-button" onclick="char(0)">0</button>
+        <button class="black-button" onclick="char('.')">.</button>
+        
+    </div>
+</body>
+<script>
+    
+    let input = document.getElementById("teste");
+
+    function char(num) {
+        input.value += num
+    }
+
+    function del() {
+        input.value = "";
+    }
+
+    function calcular() {
+        input.value = eval(input.value);
+    }
+
+    function invert() {
+        input.value = input.value * -1;
+    }
+
+    
+</script>
+</html>
